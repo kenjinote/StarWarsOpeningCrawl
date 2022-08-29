@@ -48,7 +48,7 @@ public:
 		lstrcpy(lf.lfFaceName, TEXT("Impact"));
 		hFont = CreateFontIndirect(&lf);
 		SelectObject(hdc, hFont);
-		D3DXCreateText(g_pd3dDevice, hdc, lpszText, 0.0001f, 0.0001f, &pMesh, NULL, NULL);
+		D3DXCreateText(g_pd3dDevice, hdc, lpszText, 10.0000f, 1.0000f, &pMesh, NULL, NULL);
 		DeleteObject(hFont);
 		DeleteDC(hdc);
 		m_pTextMeshList.push_back(pMesh);
