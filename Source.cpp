@@ -248,7 +248,7 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
 	ShowWindow(hWnd, SW_SHOWDEFAULT);
 	UpdateWindow(hWnd);
 	BOOL done = FALSE;
-	const DWORD dwStartTime = GetTickCount();
+	const DWORD dwStartTime = (DWORD)GetTickCount64();
 	while (!done)
 	{
 		if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
